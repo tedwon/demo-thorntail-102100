@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId>
   <artifactId>demo-thorntail-102100</artifactId>
@@ -35,7 +35,7 @@
         <groupId>io.thorntail</groupId>
         <artifactId>thorntail-maven-plugin</artifactId>
         <version>${version.thorntail}</version>
-        
+
         <executions>
           <execution>
             <goals>
@@ -44,19 +44,38 @@
           </execution>
         </executions>
       </plugin>
-    
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-deploy-plugin</artifactId>
-        <version>2.8.2</version></plugin>
+        <version>2.8.2</version>
+      </plugin>
     </plugins>
   </build>
 
   <dependencies>
-    
+
     <dependency>
       <groupId>io.thorntail</groupId>
       <artifactId>jaxrs</artifactId>
     </dependency>
   </dependencies>
+
+  <repositories>
+    <repository>
+      <id>jboss-public-repository-group</id>
+      <name>JBoss Public Maven Repository Group</name>
+      <url> https://repository.jboss.org/nexus/content/groups/public-jboss/ </url>
+    </repository>
+    <repository>
+      <id>redhat-earlyaccess-repository-group</id>
+      <name>Red Hat early access repository</name>
+      <url> http://maven.repository.redhat.com/earlyaccess/all/ </url>
+    </repository>
+    <repository>
+      <id>redhat-ga-repository</id>
+      <name>Red Hat GA repository</name>
+      <url>http://maven.repository.redhat.com/ga/</url>
+    </repository>
+  </repositories>
 </project>
