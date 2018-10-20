@@ -58,6 +58,12 @@
     <dependency>
       <groupId>io.thorntail</groupId>
       <artifactId>jaxrs</artifactId>
+        <exclusions>
+            <exclusion>
+                <artifactId>javax.el-impl</artifactId>
+                <groupId>org.glassfish</groupId>
+            </exclusion>
+        </exclusions>
     </dependency>
   </dependencies>
 
