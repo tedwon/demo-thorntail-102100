@@ -67,13 +67,13 @@
         </exclusions>
         -->
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.glassfish/javax.el-impl -->
+    <!-- https://mvnrepository.com/artifact/org.glassfish/javax.el-impl 
     <dependency>
       <groupId>org.glassfish</groupId>
       <artifactId>javax.el-impl</artifactId>
       <version>3.0.1.b08-redhat-1</version>
     </dependency>
-
+-->
   </dependencies>
 
   <repositories>
