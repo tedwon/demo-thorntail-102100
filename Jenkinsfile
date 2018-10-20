@@ -20,7 +20,7 @@ pipeline {
         steps {
           container('maven') {
             sh "mvn versions:set -DnewVersion=$PREVIEW_VERSION"
-            sh "mvn -s my-settings.xml install"
+            sh "mvn install"
             sh 'export VERSION=$PREVIEW_VERSION && skaffold build -f skaffold.yaml'
 
 
@@ -56,7 +56,7 @@ pipeline {
             }
           }
           container('maven') {
-            sh 'mvn -s my-settings.xml clean deploy'
+            sh 'mvn clean deploy'
 
             sh 'export VERSION=`cat VERSION` && skaffold build -f skaffold.yaml'
 
